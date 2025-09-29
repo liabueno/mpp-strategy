@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de Descontos - McDonald's</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+  <div class="container fade-in">
+    <div class="header">
+      <h1>McDonald's</h1>
+      <p class="subtitle">Sistema de Descontos Inteligente</p>
+    </div>
+
+    <div class="form">
+      <div class="input-group">
+        <label for="valor">
+          <span class="icon">💰</span>
+          Valor do Pedido
+        </label>
+        <input type="text" id="valor" placeholder="Digite o valor em reais" required />
+      </div>
+
+      <div class="input-group">
+        <label for="desconto">
+          <span class="icon">🎯</span>
+          Tipo de Desconto
+        </label>
+        <select id="desconto">
+          <option value="0">🚫 Sem Desconto</option>
+          <option value="1">🎓 Desconto Estudante (15%)</option>
+          <option value="2">👴 Desconto Idoso (20%)</option>
+          <option value="3">🎂 Desconto Aniversário (R$ 10,00)</option>
+        </select>
+      </div>
+
+      <button class="btn-primary" onclick="calcularDesconto()">
+        Calcular Desconto
+      </button>
+    </div>
+
+    <div class="resultado-container">
+      <h2>💸 Valor Final</h2>
+      <div class="valor-final">
+        <span class="currency">R$</span>
+        <span id="valorFinal">0,00</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/script.js"></script>
+
+</body>
+
+</html>
